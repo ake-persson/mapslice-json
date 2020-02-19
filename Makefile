@@ -1,7 +1,7 @@
 all:	test
 
 clean:
-	rm -f _example/_example cover.out
+	rm -f _example/_example coverage.out
 
 fmt:
 	gofmt -w .
@@ -15,8 +15,8 @@ test:
 	gocyclo -over 15 .
 	go test . -v -covermode=atomic
 
-cover:
-	go test -covermode=count -coverprofile=cover.out
-	go tool cover -html=cover.out
+coverage:
+	go test -covermode=count -coverprofile=coverage.out
+	go tool cover -html=coverage.out
 
-.PHONY: clean fmt test
+.PHONY: clean fmt test coverage
