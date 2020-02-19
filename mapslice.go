@@ -30,6 +30,11 @@ func nextIndex() uint64 {
 	return indexCounter
 }
 
+// MapItem as a string.
+func (mi MapItem) String() string {
+	return fmt.Sprintf("{%v %v}", mi.Key, mi.Value)
+}
+
 // MarshalJSON for map slice.
 func (ms MapSlice) MarshalJSON() ([]byte, error) {
 	buf := &bytes.Buffer{}
@@ -39,7 +44,7 @@ func (ms MapSlice) MarshalJSON() ([]byte, error) {
 		if err != nil {
 			return nil, err
 		}
-		buf.WriteString(fmt.Sprintf("%q:", fmt.Sprintf("%v", mi.Key)))
+		buf.WriteString(fmt.Sprintf("%q:", fmt.Sprint(mi.Key)))
 		buf.Write(b)
 		if i < len(ms)-1 {
 			buf.Write([]byte{','})

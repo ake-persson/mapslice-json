@@ -32,7 +32,7 @@ func TestUnmarshal(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	e := "[{abc 123 1} {def 456 2} {ghi 789 3}]"
+	e := "[{abc 123} {def 456} {ghi 789}]"
 	r := fmt.Sprintf("%v", ms)
 
 	if r != e {
