@@ -26,6 +26,17 @@ func TestMarshal(t *testing.T) {
 	}
 }
 
+func TestMarshalError(t *testing.T) {
+	ms := MapSlice{
+		MapItem{Key: "abc", Value: make(chan int)},
+	}
+
+	e := "json: error calling MarshalJSON for type mapslice.MapSlice: json: unsupported type: chan int"
+	if _, err := json.Marshal(ms); err != nil && e != err.Error() {
+		t.Errorf("expected: %s\ngot: %v", e, err)
+	}
+}
+
 func TestUnmarshal(t *testing.T) {
 	ms := MapSlice{}
 	if err := json.Unmarshal([]byte("{\"abc\":123,\"def\":456,\"ghi\":789}"), &ms); err != nil {
