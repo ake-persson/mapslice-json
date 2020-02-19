@@ -2,6 +2,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/mickep76/mapslice-json)](https://goreportcard.com/report/github.com/mickep76/mapslice-json)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/mickep76/mapslice-json/blob/master/LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/mickep76/mapslice-json/badge.svg?branch=master)](https://coveralls.io/github/mickep76/mapslice-json?branch=master)
+[![Build Status](https://travis-ci.org/mickep76/mapslice-json.svg?branch=master)](https://travis-ci.org/mickep76/mapslice-json)
 
 # mapslice-json
 
