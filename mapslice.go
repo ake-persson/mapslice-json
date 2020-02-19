@@ -13,9 +13,6 @@ type MapItem struct {
 	index      uint64
 }
 
-// Map for JSON unmarshaling.
-type Map map[string]MapItem
-
 // MapSlice of map items.
 type MapSlice []MapItem
 
@@ -56,7 +53,7 @@ func (ms MapSlice) MarshalJSON() ([]byte, error) {
 
 // UnmarshalJSON for map slice.
 func (ms *MapSlice) UnmarshalJSON(b []byte) error {
-	m := Map{}
+	m := map[string]MapItem{}
 	if err := json.Unmarshal(b, &m); err != nil {
 		return err
 	}

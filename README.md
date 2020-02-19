@@ -21,8 +21,8 @@ import (
 
 func main() {
 	ms := mapslice.MapSlice{
-		mapslice.MapItem{Key: "abc\"", Value: 123},
-		mapslice.MapItem{Key: "d ef", Value: 456},
+		mapslice.MapItem{Key: "abc", Value: 123},
+		mapslice.MapItem{Key: "def", Value: 456},
 		mapslice.MapItem{Key: "ghi", Value: 789},
 	}
 
