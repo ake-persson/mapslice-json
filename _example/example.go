@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mickep76/mapslice-json"
+	"github.com/ake-persson/mapslice-json"
 )
 
 func main() {

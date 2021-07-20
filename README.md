@@ -1,8 +1,8 @@
-[![GoDoc](https://godoc.org/github.com/mickep76/mapslice-json?status.svg)](https://godoc.org/github.com/mickep76/mapslice-json)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mickep76/mapslice-json)](https://goreportcard.com/report/github.com/mickep76/mapslice-json)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/mickep76/mapslice-json/blob/master/LICENSE)
-[![Coverage Status](https://coveralls.io/repos/github/mickep76/mapslice-json/badge.svg?branch=master)](https://coveralls.io/github/mickep76/mapslice-json?branch=master)
-[![Build Status](https://travis-ci.org/mickep76/mapslice-json.svg?branch=master)](https://travis-ci.org/mickep76/mapslice-json)
+[![GoDoc](https://godoc.org/github.com/ake-persson/mapslice-json?status.svg)](https://godoc.org/github.com/ake-persson/mapslice-json)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ake-persson/mapslice-json)](https://goreportcard.com/report/github.com/ake-persson/mapslice-json)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ake-persson/mapslice-json/blob/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/ake-persson/mapslice-json/badge.svg?branch=master)](https://coveralls.io/github/ake-persson/mapslice-json?branch=master)
+[![Build Status](https://travis-ci.org/ake-persson/mapslice-json.svg?branch=master)](https://travis-ci.org/ake-persson/mapslice-json)
 
 # mapslice-json
 
@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/mickep76/mapslice-json"
+	"github.com/ake-persson/mapslice-json"
 )
 
 func main() {
