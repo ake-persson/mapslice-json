@@ -6,6 +6,8 @@ deps:
 	go get -u github.com/client9/misspell/cmd/misspell
 	go get -u github.com/gordonklaus/ineffassign
 	go get -u github.com/fzipp/gocyclo
+	go get -u github.com/fzipp/gocyclo/cmd/gocyclo@latest
+
 
 clean:
 	rm -f _example/_example coverage.out
