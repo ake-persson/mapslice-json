@@ -1,6 +1,6 @@
 module github.com/ake-persson/mapslice-json
 
-go 1.16
+go 1.18
 
 require (
 	github.com/client9/misspell v0.3.4 // indirect
