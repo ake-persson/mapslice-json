@@ -53,14 +53,14 @@ func TestUnmarshal(t *testing.T) {
 
 func ExampleMapSlice_MarshalJSON() {
 	ms := MapSlice{
-		MapItem{"abc", 123, 0},
-		MapItem{"def", 456, 0},
-		MapItem{"ghi", 789, 0},
+		MapItem{Key: "abc", Value: 123},
+		MapItem{Key: "def", Value: 456},
+		MapItem{Key: "ghi", Value: 789},
 	}
 
 	b, err := json.Marshal(ms)
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
 	fmt.Printf("%s", b)
@@ -73,10 +73,11 @@ func ExampleMapSlice_UnmarshalJSON() {
 	var ms = MapSlice{}
 
 	if err := json.Unmarshal([]byte(`{"abc":123,"def":456,"ghi":789}`), &ms); err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
-	fmt.Println(ms)
+	fmt.Printf("%s", ms)
+
 	// Output:
 	// [{abc 123} {def 456} {ghi 789}]
 }
