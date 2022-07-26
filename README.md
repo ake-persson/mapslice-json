@@ -10,6 +10,8 @@ Go MapSlice for ordered marshal/ unmarshal of maps in JSON
 
 # Example
 
+https://go.dev/play/p/wzWP5vufCvL
+
 ```go
 package main
 

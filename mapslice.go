@@ -27,6 +27,33 @@ func nextIndex() uint64 {
 	return indexCounter
 }
 
+// Keys returns a MapSlice's Keys in a slice.
+func (ms MapSlice) Keys() []interface{} {
+	s := make([]interface{}, len(ms))
+	for i, k := range ms {
+		s[i] = k.Key
+	}
+	return s
+}
+
+// KeysString returns MapSlice's Keys as []string.
+func (ms MapSlice) KeysString() []string {
+	s := make([]string, len(ms))
+	for i, k := range ms {
+		s[i] = fmt.Sprintf("%s", k.Key)
+	}
+	return s
+}
+
+// Values returns a MapSlice's values in a slice.
+func (ms MapSlice) Values() []interface{} {
+	s := make([]interface{}, len(ms))
+	for i, k := range ms {
+		s[i] = k.Value
+	}
+	return s
+}
+
 // MapItem as a string.
 func (mi MapItem) String() string {
 	return fmt.Sprintf("{%v %v}", mi.Key, mi.Value)

@@ -18,7 +18,7 @@ func TestMarshal(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	e := "{\"abc\":123,\"def\":456,\"ghi\":789}"
+	e := `{"abc":123,"def":456,"ghi":789}`
 	r := string(b)
 
 	if r != e {
@@ -39,7 +39,7 @@ func TestMarshalError(t *testing.T) {
 
 func TestUnmarshal(t *testing.T) {
 	ms := MapSlice{}
-	if err := json.Unmarshal([]byte("{\"abc\":123,\"def\":456,\"ghi\":789}"), &ms); err != nil {
+	if err := json.Unmarshal([]byte(`{"abc":123,"def":456,"ghi":789}`), &ms); err != nil {
 		t.Fatal(err)
 	}
 
