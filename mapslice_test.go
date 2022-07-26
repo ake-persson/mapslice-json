@@ -50,34 +50,3 @@ func TestUnmarshal(t *testing.T) {
 		t.Errorf("expected: %s\ngot: %s", e, r)
 	}
 }
-
-func ExampleMapSlice_MarshalJSON() {
-	ms := MapSlice{
-		MapItem{Key: "abc", Value: 123},
-		MapItem{Key: "def", Value: 456},
-		MapItem{Key: "ghi", Value: 789},
-	}
-
-	b, err := json.Marshal(ms)
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("%s", b)
-
-	// Output:
-	// {"abc":123,"def":456,"ghi":789}
-}
-
-func ExampleMapSlice_UnmarshalJSON() {
-	var ms = MapSlice{}
-
-	if err := json.Unmarshal([]byte(`{"abc":123,"def":456,"ghi":789}`), &ms); err != nil {
-		panic(err)
-	}
-
-	fmt.Printf("%s", ms)
-
-	// Output:
-	// [{abc 123} {def 456} {ghi 789}]
-}
