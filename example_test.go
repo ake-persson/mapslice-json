@@ -59,3 +59,42 @@ func ExampleMapSlice_UnmarshalJSON() {
 	// Output:
 	// [{abc 123} {def 456} {ghi 789}]
 }
+
+func ExampleMapSlice_Keys() {
+	ms := mapslice.MapSlice{
+		mapslice.MapItem{Key: "abc", Value: 123},
+		mapslice.MapItem{Key: "def", Value: 456},
+		mapslice.MapItem{Key: "ghi", Value: 789},
+	}
+
+	fmt.Println(ms.Keys())
+
+	// Output:
+	// [abc def ghi]
+}
+
+func ExampleMapSlice_KeysString() {
+	ms := mapslice.MapSlice{
+		mapslice.MapItem{Key: "abc", Value: 123},
+		mapslice.MapItem{Key: "def", Value: 456},
+		mapslice.MapItem{Key: "ghi", Value: 789},
+	}
+
+	fmt.Println(ms.Keys())
+
+	// Output:
+	// [abc def ghi]
+}
+
+func ExampleMapSlice_Values() {
+	ms := mapslice.MapSlice{
+		mapslice.MapItem{Key: "abc", Value: 123},
+		mapslice.MapItem{Key: "def", Value: 456},
+		mapslice.MapItem{Key: "ghi", Value: 789},
+	}
+
+	fmt.Println(ms.Values())
+
+	// Output:
+	// [123 456 789]
+}
