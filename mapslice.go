@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"sort"
+	"sync/atomic"
 )
 
 // MapItem representation of one map item.
@@ -23,8 +24,8 @@ func (ms MapSlice) Swap(i, j int)      { ms[i], ms[j] = ms[j], ms[i] }
 var indexCounter uint64
 
 func nextIndex() uint64 {
-	indexCounter++
-	return indexCounter
+	atomic.AddUint64(&indexCounter, 1)
+	return atomic.LoadUint64(&indexCounter)
 }
 
 // MapItem as a string.

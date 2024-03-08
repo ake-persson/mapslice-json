@@ -1,12 +1,12 @@
 all:	test
 
 deps:
-	go get -u golang.org/x/lint/golint
-	go get -u github.com/kisielk/errcheck
-	go get -u github.com/client9/misspell/cmd/misspell
-	go get -u github.com/gordonklaus/ineffassign
-	go get -u github.com/fzipp/gocyclo
-	go get -u github.com/fzipp/gocyclo/cmd/gocyclo@latest
+	go install golang.org/x/lint/golint@latest
+	go install github.com/kisielk/errcheck@latest
+	go install github.com/client9/misspell/cmd/misspell@latest
+	go install github.com/gordonklaus/ineffassign@latest
+	go get -u github.com/fzipp/gocyclo@latest
+	go install github.com/fzipp/gocyclo/cmd/gocyclo@latest
 
 
 clean:
@@ -22,7 +22,7 @@ test:
 	misspell .
 	ineffassign .
 	gocyclo -over 15 .
-	go test -v -covermode=count
+	go test -race -v
 
 coverage:
 	go test -v -covermode=count -coverprofile=coverage.out
